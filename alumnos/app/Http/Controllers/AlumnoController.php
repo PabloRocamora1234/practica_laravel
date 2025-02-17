@@ -21,7 +21,7 @@ class AlumnoController extends Controller
             'telefono' => 'nullable|string|max:16',
             'edad' => 'nullable|integer',
             'password' => 'required|string|max:64',
-            'email' => 'required|string|max:64|unique:alumnos,email',
+            'email' => 'required|string|max:64|unique:alumno,email', 
             'sexo' => 'nullable|string|max:10',
         ]);
 
@@ -43,7 +43,7 @@ class AlumnoController extends Controller
             'telefono' => 'sometimes|nullable|string|max:16',
             'edad' => 'sometimes|nullable|integer',
             'password' => 'sometimes|required|string|max:64',
-            'email' => 'sometimes|required|string|max:64|unique:alumnos,email,' . $id,
+            'email' => 'sometimes|required|string|max:64|unique:alumno,email,' . $id, // Cambia 'alumnos' a 'alumno'
             'sexo' => 'sometimes|nullable|string|max:10',
         ]);
 
